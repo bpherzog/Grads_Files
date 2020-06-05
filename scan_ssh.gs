@@ -37,5 +37,7 @@ while (lon_cur<lon_MAX)
   lon_up = lon_cur+lon_range
   prompt 'Hit enter to continue scan'
   pull empty_var
-  clear norset
+  clear
+  'set gxout grfill'
+  'set grid off'
 endwhile
