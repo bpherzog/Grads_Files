@@ -37,23 +37,11 @@ while (1)
   pull dir
   if (dir='E')
     lon_cur = lon_cur+lon_int
-    if (lon_cur>180)
-      lon_cur=lon_cur-360;
-    endif
     lon_up = lon_cur+lon_range
-    if (lon_up>180)
-      lon_up=lon_up-360;
-    endif
   endif
   if (dir='W')
     lon_cur = lon_cur-lon_int
-    if (lon_cur<-180)
-      lon_cur=lon_cur+360;
-    endif
     lon_up = lon_cur+lon_range
-    if (lon_up<-180)
-      lon_up=lon_up+360;
-    endif
   endif
 
 endwhile
