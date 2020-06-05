@@ -36,7 +36,7 @@ while (1)
   'set lat 'lat_MIN' 'lat_MAX
   'set vpage 0 5.5 4.25 8.5'
   'd ssh'
-  draw title 'SSH'
+  'draw title SSH'
   'set vpage 5.5 11.0 4.25 8.5'
   'd salt'
   draw title 'salt'
