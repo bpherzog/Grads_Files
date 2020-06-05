@@ -39,13 +39,13 @@ while (1)
   'draw title SSH'
   'set vpage 5.5 11.0 4.25 8.5'
   'd salt'
-  draw title 'salt'
+  'draw title salt'
   'set vpage 0.0 5.5 0.0 4.25'
   'd u'
-  draw title 'u'
+  'draw title u'
   'set vpage 5.5 11.0 0.0 4.25'
   'd v'
-  draw title 'v'
+  'draw title v'
   prompt 'Direction to scan (E for east, W for west, Q for quit)'
   pull dir
   if (dir='E')
