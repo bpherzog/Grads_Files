@@ -31,8 +31,9 @@ lat_MAX = 50
 *scan across the domain and display ssh
 while (lon_cur<lon_MAX)
   'set lon 'lon_cur' 'lon_up
-  'set lat 'lat_min' 'lat_max
+  'set lat 'lat_MIN' 'lat_MAX
   'd ssh'
   lon_cur = lon_cur+lon_int
   lon_up = lon_cur+lon_range
+  prompt 'Hit enter to continue scan'
 endwhile
