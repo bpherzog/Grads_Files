@@ -23,8 +23,6 @@ lon_up    = lon_cur+lon_range
 lat_MIN = 45
 lat_MAX = 50
 
-*set the lat for the display
-'set lat 'lat_min' 'lat_max
 
 *Open the control file
 'open soda4_na_ocean_or_1980_01_06_Full_Set.ctl'
