@@ -36,4 +36,6 @@ while (lon_cur<lon_MAX)
   lon_cur = lon_cur+lon_int
   lon_up = lon_cur+lon_range
   prompt 'Hit enter to continue scan'
+  pull empty_var
+  clear graphics
 endwhile
