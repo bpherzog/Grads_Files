@@ -43,5 +43,5 @@ while (1)
     lon_cur = lon_cur-lon_int
     lon_up = lon_cur+lon_range
   endif
-
+  clear
 endwhile
