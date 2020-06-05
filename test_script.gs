@@ -7,7 +7,7 @@
 *first, clear all settings and setup the display
 'reinit'
 'c'
-'set gxout grfill' *shaded grid boxes
+'set gxout grfill'
 'set grid off'
 
 *Initialize variables
