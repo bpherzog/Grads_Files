@@ -29,15 +29,31 @@ lat_MAX = 50
 
 
 *scan across the domain and display ssh
-while (lon_cur<lon_MAX)
+while (1)
   'set lon 'lon_cur' 'lon_up
   'set lat 'lat_MIN' 'lat_MAX
   'd ssh'
-  lon_cur = lon_cur+lon_int
-  lon_up = lon_cur+lon_range
-  prompt 'Hit enter to continue scan'
-  pull empty_var
-  clear
-  'set gxout grfill'
-  'set grid off'
+  prompt 'Direction to scan (E for east, W for west)'
+  pull dir
+  if (dir='E')
+    lon_cur = lon_cur+lon_int
+    if (lon_cur>180)
+      lon_cur=lon_cur-360;
+    endif
+    lon_up = lon_cur+lon_range
+    if (lon_up>180)
+      lon_up=lon_up-360;
+    endif
+  endif
+  if (dir='W')
+    lon_cur = lon_cur-lon_int
+    if (lon_cur<-180)
+      lon_cur=lon_cur+360;
+    endif
+    lon_up = lon_cur+lon_range
+    if (lon_up<-180)
+      lon_up=lon_up+360;
+    endif
+  endif
+
 endwhile
