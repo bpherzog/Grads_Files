@@ -30,10 +30,11 @@ lat_MAX = 50
 
 *scan across the domain and display ssh
 while (1)
+  clear
   'set lon 'lon_cur' 'lon_up
   'set lat 'lat_MIN' 'lat_MAX
   'd ssh'
-  prompt 'Direction to scan (E for east, W for west)'
+  prompt 'Direction to scan (E for east, W for west, Q for quit)'
   pull dir
   if (dir='E')
     lon_cur = lon_cur+lon_int
@@ -43,5 +44,7 @@ while (1)
     lon_cur = lon_cur-lon_int
     lon_up = lon_cur+lon_range
   endif
-  clear
+  if (dir='Q')
+    break
+  endif
 endwhile
