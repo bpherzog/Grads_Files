@@ -13,11 +13,9 @@
 
 
 *Initialize min and max longitude (xt_ocean)
-lon_MIN   = -180
-lon_MAX   = 180
 lon_int   = 5
 lon_range = 30
-lon_cur   = lon_MIN
+lon_cur   = -180
 lon_up    = lon_cur+lon_range
 
 *Initialize min and max latitude (yt_ocean)
